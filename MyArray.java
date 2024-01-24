@@ -1,72 +1,106 @@
 import java.util.Scanner;
 public class MyArray {
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int[] array1 = {1, 2, 3, 4, 5};
-        array1[0]=7;
-        array1[1]=5;
-        array1[2]=78;
-        array1[3]=99;
-        array1[4]=2;
 
+        int[] array;
+        array = new int[]{0, 1, 2, 3, 4, 123};
+        System.out.println(array[5]);
 
-    imprimirArray(array1);
-        System.out.println("***********************");
-    maximoArray(array1);
-        System.out.println("El array maximo es : "+ maximoArray(array1)  );
-        System.out.println("***************************");
-        System.out.println("el array minimo es : " + minimoArray(array1));
-        System.out.println("***************************");
-        System.out.println("la media de los arrays es : " + mediaArray(array1));
-        }
-
-        public static void imprimirArray(int[]array){
-            System.out.println();
-            for (int i = 0; i < array.length ; i++) {
-                System.out.println(array[i]);
-
-            }
-        }
-    public static int maximoArray(int[]array){
-        System.out.println();
-       int maximo= array[0];
-        for (int i = 0; i < array.length ; i++) {
-            if (array[i] > maximo) {
-                maximo=array[i];
-
-            }
-            System.out.println(array[i]);
-
-        }return maximo;
-
-}
-    public static int minimoArray(int[]array){
-        System.out.println();
-        int minimo= array[0];
-        for (int i = 0; i < array.length ; i++) {
-            if (array[i] < minimo) {
-                minimo=array[i];
-
-            }
-            System.out.println(array[i]);
-
-        }return minimo;
+        System.out.println(maximoArray());
+        System.out.println(minimoArray());
+        System.out.println(mediaArray());
+        System.out.println(sonIguales());
 
     }
-    public static int mediaArray(int[]array){
-        System.out.println();
-        int suma=0;
 
-        for (int i = 0; i < array.length ; i++) {
+    public static int maximoArray() {
 
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduce 5 numeros para saber cual es el maximo entre ellos");
+        int[] numIntroducido;
+        numIntroducido = new int[5];
+        for (int i = 0; i < numIntroducido.length; i++) {
+            numIntroducido[i] = in.nextInt();
 
         }
-        int media= suma/array.length;
+
+        int maximo = numIntroducido[0];  // Asigna el primer elemento como máximo inicial
+
+        for (int i = 1; i < numIntroducido.length; i++) {
+            if (numIntroducido[i] > maximo) {
+                maximo = numIntroducido[i];
+            }
+        }
+        System.out.println("El máximo entre ellos es :");
+        return maximo;
+
+    }
+
+    public static int minimoArray() {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduce 5 numeros para saber cual es el minimo entre ellos");
+        int[] numIntroducido;
+        numIntroducido = new int[5];
+        for (int i = 0; i < numIntroducido.length; i++) {
+            numIntroducido[i] = in.nextInt();
+
+        }
+
+        int minimo = numIntroducido[0];  // Asigna el primer elemento como máximo inicial
+
+        for (int i = 1; i < numIntroducido.length; i++) {
+            if (numIntroducido[i] < minimo) {
+                minimo = numIntroducido[i];
+            }
+        }
+        System.out.println("El menor entre ellos es :");
+        return minimo;
+    }
+
+    public static int mediaArray() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduce 5 numeros para saber la media entre ellos");
+        int[] numIntroducido;
+        numIntroducido = new int[5];
+
+
+        for (int i = 0; i < numIntroducido.length; i++) {
+            numIntroducido[i] = in.nextInt();
+        }
+        int sumaNumeros = numIntroducido[0] + numIntroducido[1] + numIntroducido[2] + numIntroducido[3] + numIntroducido[4] ;
+        int media = sumaNumeros / 5;
+        System.out.println("La media es:");
         return media;
     }
+    public static boolean sonIguales() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Introduce 3 numeros para saber si existen en el programa del 1 al 100");
+        int[] array;
+        array = new int[3];
+        int[] array2;
+        array2 = new int[]{2, 78, 93};
+        boolean coincide = true;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = in.nextInt();
+        }
+        for (int i = 0; i <array2.length; i++) {
+            if (array == array2) {
+                coincide=true;
+                System.out.println("Felicidades el numero coincide" );
+                    break;
+            } else {
+                coincide=false;
+                System.out.println("No coincide");
+            }
 
-}
+        }
+        return coincide;
+    }
+    }
+
+
 
 
 
