@@ -11,6 +11,8 @@ public class MyArray {
         System.out.println(minimoArray());
         System.out.println(mediaArray());
         System.out.println(sonIguales());
+        System.out.println(sumaVectores());
+        System.out.println(restaVectores());
 
     }
 
@@ -98,6 +100,19 @@ public class MyArray {
         }
         return coincide;
     }
+            public static int sumaVectores(){
+                int[]vector1={1,2,3,4};
+                int sumaVector=vector1[0]+vector1[2];
+                System.out.println("esta es la suma " + sumaVector);
+                return sumaVector;
+            }
+    public static int restaVectores(){
+        int[]vector1={1,2,3,4};
+        int restaVector=vector1[0]-vector1[2];
+        System.out.println("esta es la suma " + restaVector);
+        return restaVector;
+    }
+
     }
 
 
