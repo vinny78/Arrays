@@ -13,6 +13,7 @@ public class MyArray {
         System.out.println(sonIguales());
         System.out.println(sumaVectores());
         System.out.println(restaVectores());
+        //System.out.println(invertirArray());
 
     }
 
@@ -71,49 +72,82 @@ public class MyArray {
         for (int i = 0; i < numIntroducido.length; i++) {
             numIntroducido[i] = in.nextInt();
         }
-        int sumaNumeros = numIntroducido[0] + numIntroducido[1] + numIntroducido[2] + numIntroducido[3] + numIntroducido[4] ;
+        int sumaNumeros = numIntroducido[0] + numIntroducido[1] + numIntroducido[2] + numIntroducido[3] + numIntroducido[4];
         int media = sumaNumeros / 5;
         System.out.println("La media es:");
         return media;
     }
+
     public static boolean sonIguales() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Introduce 3 numeros para saber si existen en el programa del 1 al 100");
+        System.out.println("Introduce 3 numeros para saber si existen en el programa del 1 al 10");
         int[] array;
         array = new int[3];
         int[] array2;
-        array2 = new int[]{2, 78, 93};
+        array2 = new int[]{2};
         boolean coincide = true;
         for (int i = 0; i < array.length; i++) {
             array[i] = in.nextInt();
         }
-        for (int i = 0; i <array2.length; i++) {
+        for (int i = 0; i < array2.length; i++) {
             if (array == array2) {
-                coincide=true;
-                System.out.println("Felicidades el numero coincide" );
-                    break;
+                coincide = true;
+                System.out.println("Felicidades el numero coincide");
+                break;
             } else {
-                coincide=false;
+                coincide = false;
                 System.out.println("No coincide");
             }
 
         }
         return coincide;
     }
-            public static int sumaVectores(){
-                int[]vector1={1,2,3,4};
-                int sumaVector=vector1[0]+vector1[2];
-                System.out.println("esta es la suma " + sumaVector);
-                return sumaVector;
-            }
-    public static int restaVectores(){
-        int[]vector1={1,2,3,4};
-        int restaVector=vector1[0]-vector1[2];
-        System.out.println("esta es la suma " + restaVector);
+
+    public static int sumaVectores() {
+        int[] vector1 = {1, 2, 3, 4};
+        int sumaVector = vector1[0] + vector1[2];
+        System.out.println("esta es la suma " + vector1[0] + " + " + vector1[2]);
+        for (int i = 0; i < vector1.length; i++) {
+            System.out.println(vector1[i] + "");
+
+        }
+        return sumaVector;
+    }
+
+    public static int restaVectores() {
+        int[] vector1 = {1, 2, 3, 4};
+        int restaVector = vector1[3] - vector1[2];
+        System.out.println("esta es la resta " + vector1[3] + "-" + vector1[2]);
+
+        /*asi es como se imprime un array
+        for (int i = 0; i < vector1.length; i++) {
+            System.out.println(vector1[i]+"");*/
+
         return restaVector;
     }
 
+   /* public static int invertirArray() {
+
+        int[] array = {1, 2, 3, 4, 5, 6};
+        int longitud = array.length;
+        for (int i = 0; i < longitud / 2; i++) {
+            int temp = array[i];
+            array[i] = array[longitud - 1 - i];
+            array[longitud - 1 - i] = temp;
+
+        }
+        return invertirArray();*/
     }
+
+
+
+
+
+
+
+
+
+
 
 
 
