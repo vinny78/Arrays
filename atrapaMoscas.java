@@ -1,16 +1,33 @@
 import java.util.Random;
 import java.util.Scanner;
 public class atrapaMoscas {
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("La mosca es igual al numero 8,8=mosca");
-        int mosca= 8;
-        Random movimientoMosca= new Random();
-        int[]arrayPosiciones=new int[15];
-        arrayPosiciones[9]=mosca;
-       int eleccionNumero= in.nextInt();
-        for (int i = 0; i <=arrayPosiciones.length ; i++) {
+        atrapamosca();
+    }
+
+    public static void atrapamosca() {
+        Scanner in = new Scanner(System.in);
+        boolean posicionMosca = false;
+        int[] eleccionPosicion = new int[1];
+        int[] array = new int[16];
+        int longitudArray = array.length;
+        int posicionVacia= 0;
+        System.out.println("introduce una posicion");
+
+        for (int i = 0; i < eleccionPosicion.length; i++) {
+            eleccionPosicion[i] = in.nextInt();
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i]=0);
+            }
+        Random random=new Random();
+        int movimientoMosca = random.nextInt(1, 15);
+        System.out.println(array[movimientoMosca]=7);
 
         }
-    }
+
 }
+
+
