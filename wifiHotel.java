@@ -5,7 +5,6 @@ public class wifiHotel {
     static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
         señalHotel();
-
     }
     public static void señalHotel(){
         int[] array = new int[20];
@@ -29,6 +28,7 @@ public class wifiHotel {
             posicionElegida++;
 
         }
+        //tuve que crear otra variable con el valor de posicion y hacer el mismo for de arriba
         for (int i = potenciaRouter; i >0 ; i--) {
             array[posicionInversa]=i;
             posicionInversa--;
